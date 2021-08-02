@@ -1,0 +1,23 @@
+#############################################################################################
+record(ai, "$(S):$(TA):$(DN):ReadPosition") {
+  field(DESC, "Read the Position")
+  field(DTYP, "stream")
+  field(INP, "@Mixer.proto getPosition Mixer1")
+  field(SCAN, "1 second")
+  info(archive, "Monitor, 00:01:00, VAL HIHI LOLO")
+}
+
+record(ao, "$(S):$(TA):$(DN):WritePosition") {
+  field(DESC, "Write the Position")
+  field(DTYP, "stream")
+  field(OUT, "@Mixer.proto writePosition Mixer1")
+  field(HIHI, "6")
+  field(LOLO, "1")
+  field(HOPR, "6")
+  field(LOPR, "1")
+  field(DRVH, "6")
+  field(DRVL, "1")
+  info(autosaveFields, "VAL")
+  info(archive, "Monitor, 00:01:00, VAL HIHI LOLO")
+}
+

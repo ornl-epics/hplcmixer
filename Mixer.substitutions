@@ -1,0 +1,18 @@
+file Mixer.db
+{
+pattern {S, TA, DN}
+        {BL4A, SE, Mixer}
+}
+
+file pv_retry_simple.template
+{
+pattern {PV, PV_RETRY, PREC, EGU, DLY}
+
+        {BL4A:SE:Mixer:WritePosition, BL4A:SE:Mixer:WritePosRetry, 1, POS, 0.3}
+
+}
+
+
+
+
+
